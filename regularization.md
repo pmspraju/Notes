@@ -1,6 +1,6 @@
-## Gradient Centralization
+### Gradient Centralization
 
-### Gradient Centralization (GC) is a training technique that centers the gradients of neural network weights by subtracting their mean. The operation is:
+#### Gradient Centralization (GC) is a training technique that centers the gradients of neural network weights by subtracting their mean. The operation is:
 
 ```
 grad = grad - grad.mean(dim=list(range(1,len(grad.shape))), keepdim=True)
