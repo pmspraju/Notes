@@ -22,7 +22,7 @@ Input → Conv1 → BN → ReLU → Conv2 → BN → + → ReLU → Output
 This lets the network decide whether to use the transformed features or preserve input features.
 Used extensively in modern architectures like ResNet, making training of very deep networks (100+ layers) feasible.
 
-### can you please explain the point easier optimization because network can learn residual function ?
+#### can you please explain the point easier optimization because network can learn residual function ?
 
 Let's break it down with a simple analogy:
 Imagine teaching someone to hit a target:
@@ -38,7 +38,7 @@ Residual: Network learns the difference F(x) = H(x) - x
 It's like saying "learn how to modify the input" rather than "learn everything from scratch." This is typically an easier optimization problem since zero is often a good initial guess for the residual.
 If no transformation is needed, the network can easily learn F(x) ≈ 0 by pushing weights close to zero.
 
-### so does it have significance when to skip and connect the input back?
+#### so does it have significance when to skip and connect the input back?
 
 The skip connection's significance depends on the layer's depth and task:
 Early layers: Less skipping needed as they learn basic features
